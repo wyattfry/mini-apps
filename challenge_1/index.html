@@ -1,2 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded" rel="stylesheet">
+    <title>Tic Tac Toe</title>
+  </head>
 
+  <body>
+    <h2>Tic Tac Toe</h2>
+    Leaderboard
+    <table>
+      <tbody>
+        <tr>
+          <th id="playerX">X</th>
+          <th id="playerO">O</th>
+        </tr>
+        <tr>
+          <td id="xWins">0</td>
+          <td id="oWins">0</td>
+        </tr>
+      </tbody>
+    </table>
 
+    <table class="board">
+      <tbody>
+        <tr>
+          <td class="cell" id="00">---</td>
+          <td class="cell" id="01">---</td>
+          <td class="cell" id="02">---</td>
+        </tr>
+        <tr>
+          <td class="cell" id="10">---</td>
+          <td class="cell" id="11">---</td>
+          <td class="cell" id="12">---</td>
+        </tr>
+        <tr>
+          <td class="cell" id="20">---</td>
+          <td class="cell" id="21">---</td>
+          <td class="cell" id="22">---</td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="reset-button">Reset</button>
+    <div id="result-div"></div>
+
+    <script src = 'app.js'></script>
+
+  </body>
+</html>
