@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>JSON to CSV Parser</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="app.js"></script>
   </head>
 
   <body>
     <h1>JSON to CSV Parser</h1>
 
+    <p>Enter JSON text here, then click 'Submit'. The data will be reformatted as CSVs and printed below.</p>
     <form>
-      <textarea></textarea>
-      <button>Submit</button>
+      <textarea class="JSONinput"></textarea>
+      <button class='submit-button'>Submit</button>
     </form>
 
-    <div></div>
-    
+    <h3>JSON parsed into CSV:</h3>
+    <div class="output" style="white-space: pre-wrap">Parsed JSON will appear here.</div>
+
   </body>
 </html>
