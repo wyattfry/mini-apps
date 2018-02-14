@@ -1,0 +1,7 @@
+textarea {
+  float: left;
+  max-width: 400px;
+  width: 48%;
+  min-width: 200px;
+  min-height: 300px;
+}

@@ -29,7 +29,6 @@ module.exports = function(object, lnNums = false, filter) {
     if (parent) {
       parent = ',' + parent;
     }
-    // Filter Here
     let filterMatch = false;
 
     if (filter !== '') {
