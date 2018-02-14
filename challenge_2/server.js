@@ -9,7 +9,7 @@ app.use(express.static('client/'));
 app.use(parser.json());
 
 app.post('/', function(req, res) {
-  res.send( toCSV(req.body) );
+  res.send( toCSV(req.body.data, true, req.body.filter) );
 });
 
 app.listen(3000);

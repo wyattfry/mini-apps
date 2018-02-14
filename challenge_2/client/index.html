@@ -11,8 +11,14 @@
     <h1>JSON to CSV Parser</h1>
 
     <p>Enter JSON text here, then click 'Submit'. The data will be reformatted as CSVs and printed below.</p>
+    <p>Example:
+      <br>{"firstName":"John","lastName":"Henry"}
+      <br>id,firstName,lastName,parentId
+      <br>1,John,Henry
+    </p>
     <form>
       <textarea class="JSONinput"></textarea>
+      <input type="text" placeholder="Filter" class="filterTerm">
       <button class='submit-button'>Submit</button>
     </form>
 
