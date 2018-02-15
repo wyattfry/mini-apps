@@ -18,7 +18,7 @@ __Goals__
 * [x] explore and understand given files (empty)
 * [x] ``npm install --save express``
 * [x] write server.js to serve static files in ``client``
-* [ ] babel should watch for file changes
+* [x] babel should watch for file changes
 * [ ] detect and report win or tie
 * [ ] page refresh restarts game
 * [ ] write >= 4 tests of end-of-game logic (ties; horiz, vert, diag wins), run either with node or in browser
@@ -139,4 +139,6 @@ __20:01__ - Finally got some React stuff on screen. Phew. A bit overwhelmed by t
 
 __20:50__ - I have form. I couldn't figure out how to dynamically make the board, just hard coded a 7 by 6 board. And I just made my first commit. Next goal might be working on the click handling, then game logic.
 
-__21:12__ - Clicking was a little tough. I just set a click handler to output `click` to console, first tried putting an `onClick={handleClick}` on the Column component, did not work. Then I tried putting it on the containing `<div>` in Column.jsx and passing the handler through as a callback function, did not work. Then I tried putting it in the cell `<div>`s, and that worked. Commit? Yes.
+__21:12__ - Clicking was a little tough. I just set a click handler to output `click` to console, first tried putting an `onClick={handleClick}` on the Column component, did not work. Then I tried putting it on the containing `<div>` in Column.jsx and passing the handler through as a callback function, did not work. Then I tried putting it in the cell `<div>`s, and that worked. Commit? Yes. Next step: click a column to play a piece. I wonder how to link the Column view to the Board state / model.
+
+__22:54__ - I think I need to have a dynamically generated board in order for the state changes to properly change the views. So I refactored, so that it now dynamically generates the board using `map()`.

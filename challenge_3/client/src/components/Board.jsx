@@ -5,19 +5,23 @@ export default class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      board: {},
+      board: [[0,0,0,0,0,0],
+              [0,0,0,0,0,0],
+              [0,0,0,0,0,0],
+              [0,0,0,0,0,0],
+              [0,0,0,0,0,0],
+              [0,0,0,0,0,0],
+              [0,0,0,0,0,0]],
     }
   }
   render() {
     return (
       <div>
-        <Column handleClick={ this.handleClick.bind(this) } />
-        <Column handleClick={ this.handleClick.bind(this) } />
-        <Column handleClick={ this.handleClick.bind(this) } />
-        <Column handleClick={ this.handleClick.bind(this) } />
-        <Column handleClick={ this.handleClick.bind(this) } />
-        <Column handleClick={ this.handleClick.bind(this) } />
-        <Column handleClick={ this.handleClick.bind(this) } />
+        {this.state.board.map( (c, index) =>
+          <Column
+          cells={c}
+          key={index}
+          handleClick={ this.handleClick.bind(this) } /> )}
       </div>
     );
   }

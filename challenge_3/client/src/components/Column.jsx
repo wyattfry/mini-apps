@@ -2,11 +2,13 @@ import React from 'react';
 
 module.exports = (props) => (
   <div className='column'>
-    <div onClick={props.handleClick} className='cell'></div>
-    <div onClick={props.handleClick} className='cell'></div>
-    <div onClick={props.handleClick} className='cell'></div>
-    <div onClick={props.handleClick} className='cell'></div>
-    <div onClick={props.handleClick} className='cell'></div>
-    <div onClick={props.handleClick} className='cell'></div>
+
+    {props.cells.map( (cell, index) =>
+      <div
+        className={(cell === 0) ? 'red' : 'black'}
+        key={index}
+        onClick={props.handleClick}
+        className='cell'>
+      </div> )}
   </div>
 );
