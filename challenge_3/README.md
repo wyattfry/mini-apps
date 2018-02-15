@@ -142,3 +142,5 @@ __20:50__ - I have form. I couldn't figure out how to dynamically make the board
 __21:12__ - Clicking was a little tough. I just set a click handler to output `click` to console, first tried putting an `onClick={handleClick}` on the Column component, did not work. Then I tried putting it on the containing `<div>` in Column.jsx and passing the handler through as a callback function, did not work. Then I tried putting it in the cell `<div>`s, and that worked. Commit? Yes. Next step: click a column to play a piece. I wonder how to link the Column view to the Board state / model.
 
 __22:54__ - I think I need to have a dynamically generated board in order for the state changes to properly change the views. So I refactored, so that it now dynamically generates the board using `map()`.
+
+__00:16__ - Click is working. Sends column number. If I had more time / energy I would implement the playing of a piece. I think from here out would be diminishing returns in terms of learning. An acceptable place to stop, at least for now.

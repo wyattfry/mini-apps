@@ -12,16 +12,18 @@ export default class Board extends React.Component {
               [0,0,0,0,0,0],
               [0,0,0,0,0,0],
               [0,0,0,0,0,0]],
-    }
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
   render() {
     return (
       <div>
-        {this.state.board.map( (c, index) =>
-          <Column
+        {this.state.board.map( (c, index) => {
+          return <Column
           cells={c}
           key={index}
-          handleClick={ this.handleClick.bind(this) } /> )}
+          column={index}
+          handleClick={this.handleClick} /> })}
       </div>
     );
   }

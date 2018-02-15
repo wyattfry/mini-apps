@@ -1,14 +1,15 @@
 import React from 'react';
 
-module.exports = (props) => (
+const Column = (props) => (
   <div className='column'>
 
     {props.cells.map( (cell, index) =>
       <div
-        className={(cell === 0) ? 'red' : 'black'}
         key={index}
-        onClick={props.handleClick}
+        onClick={() => props.handleClick(props.column)}
         className='cell'>
       </div> )}
   </div>
 );
+
+export default Column;
