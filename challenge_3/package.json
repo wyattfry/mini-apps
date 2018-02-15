@@ -1,0 +1,26 @@
+{
+  "name": "connect_4",
+  "version": "1.0.0",
+  "description": "Connect 4 game written with node/express server and react client",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect server.js",
+    "react-dev": "webpack -d --watch"
+  },
+  "author": "Wyatt Fry",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jquery": "^3.3.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.11.0"
+  }
+}

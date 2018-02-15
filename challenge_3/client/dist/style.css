@@ -1,0 +1,20 @@
+div.cell {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+div.column {
+  float: left;
+}
+
+div.red {
+  background-color: red;
+}
+
+div.black {
+  background-color: black;
+}
