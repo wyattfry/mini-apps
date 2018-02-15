@@ -11,15 +11,18 @@ export default class Board extends React.Component {
   render() {
     return (
       <div>
-        <Column />
-        <Column />
-        <Column />
-        <Column />
-        <Column />
-        <Column />
-        <Column />
+        <Column handleClick={ this.handleClick.bind(this) } />
+        <Column handleClick={ this.handleClick.bind(this) } />
+        <Column handleClick={ this.handleClick.bind(this) } />
+        <Column handleClick={ this.handleClick.bind(this) } />
+        <Column handleClick={ this.handleClick.bind(this) } />
+        <Column handleClick={ this.handleClick.bind(this) } />
+        <Column handleClick={ this.handleClick.bind(this) } />
       </div>
     );
   }
   // Game Logic
+  handleClick(e) {
+    console.log('click', e);
+  }
 }

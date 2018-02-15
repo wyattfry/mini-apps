@@ -137,4 +137,6 @@ __19:47__ - I couldn't get any React things to appear on the webpage, asked Kevi
 
 __20:01__ - Finally got some React stuff on screen. Phew. A bit overwhelmed by the amount of knowledge one must remember. Since 19:47 I've been fixing what ended up being about 10 errors, some ES6 things, some forgotten exports or imports. I still am fuzzy on the syntax for importing and exporting, e.g. `default`, module.exports vs. export default, require, import
 
-__20:50__ - I have form. I couldn't figure out how to dynamically make the board, just hard coded a 7 by 6 board.
+__20:50__ - I have form. I couldn't figure out how to dynamically make the board, just hard coded a 7 by 6 board. And I just made my first commit. Next goal might be working on the click handling, then game logic.
+
+__21:12__ - Clicking was a little tough. I just set a click handler to output `click` to console, first tried putting an `onClick={handleClick}` on the Column component, did not work. Then I tried putting it on the containing `<div>` in Column.jsx and passing the handler through as a callback function, did not work. Then I tried putting it in the cell `<div>`s, and that worked. Commit? Yes.
