@@ -129,3 +129,54 @@ var sampleData = [
 ];
 ```
 
+I passed it to the ScoreCard component, refactored the jsx in ScoreCard to map data to the table, and it worked.
+
+__16:22__ - Text input now works, committed. Next is the game logic. I conjured until the input worked, I'd like to save what I ended up with to avoid conjuring again.
+
+### Sending User Input to Parent Component
+
+__Child Component "Input"__
+
+```jsx
+import React from 'react';
+const Input = (props) => <input
+  type="text"
+  onKeyPress={(e) => (props.handleKeyPress(e))}
+  placeholder="Pins knocked down this ball (0-10)"/>;
+export default Input;
+``` 
+__Parent Component "App"__
+
+```jsx
+  ...
+  render() {
+    return (
+        <div>
+          <h1>Bowling 🎳</h1>
+          <Input handleKeyPress={this.handleKeyPress}/>
+          <ScoreCard frames={sampleData}/>
+        </div>
+    );
+  }
+  handleKeyPress(e) {
+    // e.target.value = # of pins to knock down
+    if (e.key === 'Enter') {
+
+      if (!this.validateInput(e.target.value)) {
+        alert('Please enter a number, 0 to 10');
+      } else {
+        this.knockDownPins(e.target.value);
+      }
+      e.target.value = '';
+    }
+  }
+  ...
+```
+
+__18:52__: - Back to work after dinner now. Didn't make my goal of finishing MVP by dinner, but I think I am making good progress. Ok, back to the game logic.
+
+__20:08__ - Still working on the logic. Specifically, how to add points back to strikes and spares.
+
+__23:56__ - Logic mostly done, handles open frames, strikes and spares. Just need to handle strikes in frame 10, and stopping the game after frame 10. Trying to think if I have any take aways from this last stretch...
+
+__00:11__ - Strike in frame 10 done.
