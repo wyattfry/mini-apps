@@ -25,3 +25,9 @@ td {
 #app {
   margin: 25px;
 }
+
+.alerts {
+  padding-left: 150px;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+}

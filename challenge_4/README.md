@@ -11,7 +11,9 @@ Keep track of / display score of each bowl, frame, and game
 
 __TODO__
 
+- [x] Implement end game handling
 - [ ] Write tests that verify whether scoring rules are correctly implemented
+- [ ] Ball 2 value limit
 
 __Pin Numbers__
 
@@ -180,3 +182,7 @@ __20:08__ - Still working on the logic. Specifically, how to add points back to 
 __23:56__ - Logic mostly done, handles open frames, strikes and spares. Just need to handle strikes in frame 10, and stopping the game after frame 10. Trying to think if I have any take aways from this last stretch...
 
 __00:11__ - Strike in frame 10 done.
+
+__01:05__ - All end games accounted for (open frame in 10th, spare in 10th, strike in 10th), I did some simple user testing to verify, not very thorough, haven't written any formal tests yet, but I think I should get some sleep.
+
+__01:23__ - Handles end game with a little more grace: prevents additional moves, has a little div that says 'Game Over' that appears.
